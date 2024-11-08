@@ -2,6 +2,6 @@
 
 Explanation of activation
 
-cd client -> npm run dev
+cd client -> npm install -> npm run dev
 
 cd server -> npm start
