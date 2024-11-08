@@ -1,0 +1,56 @@
+.employee-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  .employee-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width:380px;
+    max-width: 380px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+
+    &:hover {
+      box-shadow: 0 8px 20px rgb(202 229 246);
+    }
+    .employee-avatar {
+      width: 130px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 16px;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      margin: 60px 0px 0px 14px;
+      .card-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1d2e41;
+        display: flex;
+      }
+    }
+  }
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid white;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}

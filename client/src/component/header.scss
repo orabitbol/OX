@@ -1,0 +1,110 @@
+.header-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      margin: 10px;
+      color: #33aaf3;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .logout-button {
+      margin: 10px;
+      color: #33aaf3;
+      border: 1px solid #33aaf3;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: transparent;
+      padding: 5px 15px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    .create-button {
+      background-color: #33aaf3;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      .icon-plus {
+        margin-left: 6px;
+        font-size: 20px;
+      }
+    }
+
+    .search-filter-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: white;
+      flex: 1;
+      max-width: 570px;
+
+      .search {
+        flex: 1;
+        max-width: 400px;
+
+        .MuiOutlinedInput-root {
+          border-radius: 0;
+          padding-left: 0;
+          background-color: white;
+          border: none; /* Remove the gray line */
+        }
+
+        .MuiInputAdornment-root {
+          color: #8c8c8c;
+          margin-left: 6px;
+        }
+
+        fieldset.MuiOutlinedInput-notchedOutline {
+          border: none;
+        }
+      }
+      .divider {
+        width: 1px;
+        height: 30px;
+        background-color: #ddd;
+      }
+
+      .select-status {
+        min-width: 180px;
+        background-color: white;
+
+        .MuiOutlinedInput-root {
+          border-radius: 0;
+          background-color: white;
+          border: none; /* Remove the gray line */
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+          border: none;
+        }
+
+        .status-select .placeholder {
+          color: #8c8c8c; /* Style placeholder text */
+        }
+      }
+    }
+  }
+}
