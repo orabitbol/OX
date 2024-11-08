@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IEmployeeList } from "../model/global";
 import {
   Card,
@@ -15,6 +15,17 @@ const EmployeeList: React.FC<IEmployeeList> = ({
   employees,
   onStatusChange,
 }) => {
+  const [hoveredEmployeeId, setHoveredEmployeeId] = useState<number | null>(
+    null
+  );
+
+  const handleMouseEnter = (employeeId: number) => {
+    setHoveredEmployeeId(employeeId);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredEmployeeId(null);
+  };
 
   const getStatusDotColor = (status: string) => {
     switch (status) {
@@ -38,16 +49,19 @@ const EmployeeList: React.FC<IEmployeeList> = ({
   return (
     <div className="employee-component">
       {employees.map((employee) => (
-        <Card
-          key={employee.id}
-          className="employee-card"
-        >
+        <Card key={employee.id} className="employee-card">
           <CardMedia
             component="img"
             height="140"
-            image={employee.img}
+            image={
+              hoveredEmployeeId === employee.id
+              ? employee.gif // Updated GIF URL
+                : employee.img
+            }
             alt={employee.name}
             className="employee-avatar"
+            onMouseEnter={() => handleMouseEnter(employee.id)}
+            onMouseLeave={handleMouseLeave}
           />
 
           <CardContent className="card-content">

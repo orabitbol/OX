@@ -3,6 +3,7 @@ export interface IEmployee {
   name: string;
   status: string;
   img: string;
+  gif: string;
 }
 export interface IEmployeeList {
   employees: IEmployee[];
