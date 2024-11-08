@@ -4,4 +4,4 @@ Explanation of activation
 
 cd client -> npm install -> npm run dev
 
-cd server -> npm start
+cd server -> npm install -> npm start
